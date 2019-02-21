@@ -45,21 +45,21 @@ class linked_list:
             temp = temp.next
         return temp.data
     # print list of nodes
-    def print_list(self):
+    def __str__(self):
         node = self.head
+        pretty_string = ''
         while node != None:
-            print(node.data, end=" -> ")
+            # print(node.data, end=" -> ")
+            pretty_string += str(node.data) + '->'
             node = node.next
+        return pretty_string
         
 def main():
-    # class instantiation uses function notation
-    ll = linked_list()
-
+    ll = linked_list() # class instantiation uses function notation
     ll.add_at_front(0)
     ll.add_at_end(3)
     ll.add_at_front(1)
     ll.delete_node(3)
-
-    ll.print_list()
+    print(ll)
 
 main()

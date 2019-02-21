@@ -15,15 +15,15 @@ class Stack:
         self.items.pop()
 
     # print stack
-    def print_stack(self):
-        print(self.items)
+    def __str__(self):
+        return str(self.items)
 
 def main():
     s = Stack()
     s.push(1)
     s.push('b')
     s.push('cc')
-    s.print_stack()
+    print(s)
 
 main()
     
